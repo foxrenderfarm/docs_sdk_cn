@@ -2,7 +2,7 @@
 """Configure Sphinx."""
 # pylint: skip-file
 #
-# RenderBus SDK documentation build configuration file, created by
+# Foxrenderfarm SDK documentation build configuration file, created by
 # sphinx-quickstart on Fri Jan 06 15:29:00 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -75,7 +75,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'RenderBus SDK'
+project = u'Foxrenderfarm SDK'
 copyright = u'2019 Rayvision Core Dev Team'
 author = u''
 
@@ -133,7 +133,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Renderbus SDK'
+htmlhelp_basename = 'Foxrenderfarm SDK'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -160,7 +160,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RenderBus SDK.tex', u'RenderBus SDK Documentation',
+    (master_doc, 'Foxrenderfarm SDK.tex', u'Foxrenderfarm SDK Documentation',
      u'', 'manual'),
 ]
 
@@ -170,7 +170,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'RenderBus SDK', u'RenderBus SDK Documentation',
+    (master_doc, 'Foxrenderfarm SDK', u'Foxrenderfarm SDK Documentation',
      [author], 1)
 ]
 
@@ -181,8 +181,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'RenderBus SDK', u'RenderBus SDK Documentation',
-     author, 'RenderBus SDK',
+    (master_doc, 'Foxrenderfarm SDK', u'Foxrenderfarm SDK Documentation',
+     author, 'Foxrenderfarm SDK',
      'Shame on Yu tao',
      'Miscellaneous'),
 ]

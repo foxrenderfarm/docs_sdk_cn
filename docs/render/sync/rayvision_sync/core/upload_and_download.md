@@ -4,7 +4,6 @@
 
 > 有的upload.json文件可能有多达数十万个资源, 这时候可能就需要对upload文件进行切割。
 
-
 ```
 def cutting_upload(upload_path, max_resources_number=None, after_cutting_position=None):
     """Cut upload.json according to the number of custom files.
@@ -22,7 +21,9 @@ def cutting_upload(upload_path, max_resources_number=None, after_cutting_positio
 
     """
 ```
+
 使用样例:
+
 ```
 from rayvision_sync.utils import cutting_upload
 upload_pool = cutting_upload(r"D:\test\test_upload\1586250829\upload.json", max_resources_number=800)
@@ -39,7 +40,7 @@ def thread_pool_upload(self, upload_pool, pool_size=10, **kwargs)::
         pool_size (int): thread pool size, default is 10 threads.
 
     """
-    
+  
 ```
 
 使用样例：
@@ -87,7 +88,7 @@ api = RayvisionAPI(access_id="xxxxx",
                    access_key="xxxxx",
                    domain="task.renderbus.com",
                    platform="2")
-                   
+                 
 UPLOAD = RayvisionUpload(api)
 UPLOAD.upload_asset(r"D:\test\test_upload\1586250829\upload.json")
 ```
@@ -118,7 +119,7 @@ from rayvision_sync.upload import RayvisionUpload
 
 api = RayvisionAPI(access_id="xxxxx",
                    access_key="xxxxx",
-                   domain="task.renderbus.com",
+                   domain="task.foxrenderfarm.com",
                    platform="2")
 
 CONFIG_PATH = [
@@ -162,7 +163,7 @@ from rayvision_sync.upload import RayvisionUpload
 
 api = RayvisionAPI(access_id="xxxxx",
                    access_key="xxxxx",
-                   domain="task.renderbus.com",
+                   domain="task.foxrenderfarm.com",
                    platform="2")
 
 CONFIG_PATH = [
@@ -185,7 +186,7 @@ from rayvision_api.utils import append_to_upload
 
 api = RayvisionAPI(access_id="xxxxx",
                    access_key="xxxxx",
-                   domain="task.renderbus.com",
+                   domain="task.foxrenderfarm.com",
                    platform="2")
 UPLOAD = RayvisionUpload(api)
 
@@ -210,14 +211,15 @@ UPLOAD.upload_asset(r"D:\test\upload.json")
 - upload_list
 
   > 这种上传模式指定的“upload_json_path”文件(支持txt和json文件)内容每一行可以是一个文件绝对路径或者文件夹绝对路径，如果是文件夹则会上传文件夹里面所有文件。
+  >
 
   例如:
 
   ![](https://blog-tao625.oss-cn-shenzhen.aliyuncs.com/izone/blog/20201116160335.png)
-
 - upload_json
 
   > 这种上传模式指定的“upload_json_path”文件(json文件)内容必须按照固定格式, 且只能上传文件
+  >
 
   例如:
 
@@ -289,7 +291,7 @@ from rayvision_sync.download import RayvisionDownload
 
 api = RayvisionAPI(access_id="xxx",
              access_key="xxx",
-             domain="task.renderbus.com",
+             domain="task.foxrenderfarm.com",
              platform="2")
 
 download = RayvisionDownload(api)
@@ -350,7 +352,7 @@ from rayvision_sync.download import RayvisionDownload
 
 api = RayvisionAPI(access_id="xxx",
                    access_key="xxx",
-                   domain="task.renderbus.com",
+                   domain="task.foxrenderfarm.com",
                    platform="2")
 
 download = RayvisionDownload(api)
@@ -410,7 +412,7 @@ from rayvision_sync.download import RayvisionDownload
 
 api = RayvisionAPI(access_id="xxx",
                    access_key="xxx",
-                   domain="task.renderbus.com",
+                   domain="task.foxrenderfarm.com",
                    platform="2")
 
 download = RayvisionDownload(api)
@@ -424,19 +426,17 @@ download.download(download_filename_format="true", server_path="18164087_muti_la
 - 上传自动获取传输线路:
 
   `RayvisionUpload(api, automatic_line=True)`
-
 - 下载自动获取传输线路:
 
   `RayvisionDownload(api, automatic_line=True)`
 
 #### 2.开启自动获取传输线路并选择网络提供商
 
-网络商名称可以通过接口`get_transfer_config`获取)
+网络商名称可以通过接口 `get_transfer_config`获取)
 
 - 上传自动获取传输线路并自定义网络商
 
   `RayvisionUpload(api, automatic_line=True, internet_provider="移动")`
-
 - 下载自动获取传输线路并自定义网络商
 
   `RayvisionDownload(api, automatic_line=True, internet_provider="移动")`
@@ -453,13 +453,11 @@ network_mode: 控制网络传输模式
 download.auto_download([49240085], network_mode=2)
 ```
 
-
-
 ### 自定义传输服务地址和传输引擎选择
 
 > 上传服务地址一般是不需要修改，如果线路不佳也支持自定义修改
 
-#####    1. 上传自定义传输地址和自定义传输引擎设置
+##### 1. 上传自定义传输地址和自定义传输引擎设置
 
 > 传输引擎支持：aspera 和 raysyncproxy
 
@@ -468,7 +466,7 @@ download.auto_download([49240085], network_mode=2)
   > ```python
   > UPLOAD.upload_asset(r"D:\test\upload.json", engine_type='aspera', server_ip="45.251.92.16", server_port="12121")
   > ```
-
+  >
 - upload_config
 
   ```python
@@ -483,7 +481,6 @@ download.auto_download([49240085], network_mode=2)
                        server_ip="45.251.92.16",
                        server_port="12121")
   ```
-
 - upload
 
   ```python
@@ -504,21 +501,19 @@ download.auto_download([49240085], network_mode=2)
   ```
   download.download([49240085], server_ip="45.251.92.16", server_port="12121")
   ```
-
 - auto_download
 
   ```
   download.auto_download([49240085], server_ip="45.251.92.16", server_port="12121")
   ```
-
 - auto_download_after_task_completed
 
   ```
   download.auto_download_after_task_completed([49228557], server_ip="45.251.92.16", server_port="12121")
   ```
 
-  
 ##### 3. 选择raysyncproxy引擎创建传输任务
+
 ```python
     def start_transfer(self, server_ip, server_port, local_path, server_path, storage_id, 
                        task_type=None, task_id=None, file_type="normal", 
@@ -554,6 +549,7 @@ download.auto_download([49240085], network_mode=2)
               100,101,102,500.....: failed
         """
 ```
+
 使用样例:
 
 ```python

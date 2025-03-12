@@ -11,7 +11,7 @@
 .. code:: 
 
    我们开放一个简单的Python渲染SDK来更方便地使用我们的云渲染服务；
-   这个官方渲染SDK由 RENDERBUS 的 RD和TD 团队一起维护开发；
+   这个官方渲染SDK由 Foxrenderfarm 的 RD和TD 团队一起维护开发；
    这个渲染SDK在 python2.7 and python3.6 下测试通过;
 
 .. _header-n5:
@@ -65,10 +65,10 @@
 准备工作
 --------
 
-1. 您需要一个 `RENDERBUS <https://task.renderbus.com>`__ 账号
+1. 您需要一个 `Foxrenderfarm <https://task.Foxrenderfarm.com>`__ 账号
 
-2. 您还需要在 `RENDERBUS
-   开发者中心 <https://task.renderbus.com/user/developer>`__
+2. 您还需要在 `Foxrenderfarm
+   开发者中心 <https://task.Foxrenderfarm.com/user/developer>`__
    申请使用渲染SDK，并获取AccessID和AccessKey
 
 .. _header-n26:

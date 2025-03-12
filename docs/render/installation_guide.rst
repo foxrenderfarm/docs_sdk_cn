@@ -58,5 +58,5 @@ SDK Blender
 
    - 直接从GitHub下载源码(以maya为例):
 
-   ``git clone https://github.com/renderbus/rayvision_maya.git``
+   ``git clone https://github.com/Foxrenderfarm/rayvision_maya.git``
 

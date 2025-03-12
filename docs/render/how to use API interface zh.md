@@ -6,7 +6,7 @@
 
 ```python
 user_info = {
-    "domain_name": "task.renderbus.com",
+    "domain_name": "task.Foxrenderfarm.com",
     "platform": "2",
     "access_id": "xxxxxxxxxxxxxxxxxxxxxx",
     "access_key": "xxxxxxxxxxxxxxxxxxxxx",
@@ -17,7 +17,6 @@ api = RayvisionAPI(access_id=user_info['access_id'],
                    domain=user_info['domain_name'],
                    platform=user_info['platform'])
 ```
-
 
 **说明**：
 
@@ -32,14 +31,14 @@ api = RayvisionAPI(access_id=user_info['access_id'],
 
 **返回参数**：
 
-| **参数**    | **类型** | **说明**   | **备注** |
-| --------   | ------- | ---------- | -------- |
-| platform   | Integer | 平台号     |          |
-| name       | String   | 平台名描述 |          |
-| type       | Integer   | 平台类型 |0:GPU,1:CPU,2:效果图|
-| status     | Integer   | 平台状态 |0:未启用,1:正常,2:繁忙,3:爆满 |
-| taskPrefix | String   | 任务号的平台前缀 |    "W"      |
-| isShow     | Integer   | 是否显示 | 1:显示,0:不显示   |
+| **参数** | **类型** | **说明**   | **备注**                |
+| -------------- | -------------- | ---------------- | ----------------------------- |
+| platform       | Integer        | 平台号           |                               |
+| name           | String         | 平台名描述       |                               |
+| type           | Integer        | 平台类型         | 0:GPU,1:CPU,2:效果图          |
+| status         | Integer        | 平台状态         | 0:未启用,1:正常,2:繁忙,3:爆满 |
+| taskPrefix     | String         | 任务号的平台前缀 | "W"                           |
+| isShow         | Integer        | 是否显示         | 1:显示,0:不显示               |
 
 **请求示例:** 
 
@@ -144,33 +143,33 @@ user_profile = api.user.query_user_profile()
 
 ## 获取用户设置
 
-**接口路径**： /api/render/setUp/queryUserSetting 
+**接口路径**： /api/render/setUp/queryUserSetting
 
 **请求参数**：缺省
 
 **返回参数**：
 
-| **参数**                  | **类型** | **说明**                                | **备注**       |
-|---------------------------|----------|-----------------------------------------|----------------|
-| infoStatus                | Integer  |                                         |                |
-| accountType               | Integer  |                                         |                |
-| shareMainCapital          | Integer  | 共用主账号资产 0 不共用 1共用           |                |
-| subDeleteTask             | Integer  | 是否允许子账号删除任务 0不允许 1 允许   |                |
-| useMainBalance            | Integer  | 是否允许子账号使用主账号余额或信用额度  | 0不允许 1 允许 |
-| maxIgnoreMapFlag          | String   | 是否忽略max错误贴图                     | 0不忽略，1忽略 |
-| autoCommit                | String   | 是否启动场景参数渲染                    | 1不启用，2启用 |
-| separateAccountFlag       | Integer  | 主子账号分离设置                        |                |
-| mifileSwitchFlag          | Integer  | mi文件分析风险开关                      |                |
-| assfileSwitchFlag         | Integer  | 不分析ass文件开关标识                   |                |
-| manuallyStartAnalysisFlag | Integer  | 手动开启分析开关                        |                |
-| downloadDisable           | Integer  | 禁用下载                                | 1禁用，0不禁用 |
-| taskOverTime              | Integer  | 超时时间-小时                           |                |
-| taskOverTimeSec           | Integer  | 超时时间-秒                             |                |
-| ignoreMapFlag             | Integer  | 本地分析忽略贴图丢失                    |                |
-| isVrayLicense             | Integer  | 使用付费版vray渲染                      |                |
-| justUploadConfigFlag      | Integer  | 本地分析max只上传配置文件               |                |
-| justUploadCgFlag          | Integer  | maya渲染只上传cg文件                    |                |
-| mandatoryAnalyseAllAgent  | Integer  | 本地分析强制分析所有代理                |                |
+| **参数**            | **类型** | **说明**                         | **备注** |
+| ------------------------- | -------------- | -------------------------------------- | -------------- |
+| infoStatus                | Integer        |                                        |                |
+| accountType               | Integer        |                                        |                |
+| shareMainCapital          | Integer        | 共用主账号资产 0 不共用 1共用          |                |
+| subDeleteTask             | Integer        | 是否允许子账号删除任务 0不允许 1 允许  |                |
+| useMainBalance            | Integer        | 是否允许子账号使用主账号余额或信用额度 | 0不允许 1 允许 |
+| maxIgnoreMapFlag          | String         | 是否忽略max错误贴图                    | 0不忽略，1忽略 |
+| autoCommit                | String         | 是否启动场景参数渲染                   | 1不启用，2启用 |
+| separateAccountFlag       | Integer        | 主子账号分离设置                       |                |
+| mifileSwitchFlag          | Integer        | mi文件分析风险开关                     |                |
+| assfileSwitchFlag         | Integer        | 不分析ass文件开关标识                  |                |
+| manuallyStartAnalysisFlag | Integer        | 手动开启分析开关                       |                |
+| downloadDisable           | Integer        | 禁用下载                               | 1禁用，0不禁用 |
+| taskOverTime              | Integer        | 超时时间-小时                          |                |
+| taskOverTimeSec           | Integer        | 超时时间-秒                            |                |
+| ignoreMapFlag             | Integer        | 本地分析忽略贴图丢失                   |                |
+| isVrayLicense             | Integer        | 使用付费版vray渲染                     |                |
+| justUploadConfigFlag      | Integer        | 本地分析max只上传配置文件              |                |
+| justUploadCgFlag          | Integer        | maya渲染只上传cg文件                   |                |
+| mandatoryAnalyseAllAgent  | Integer        | 本地分析强制分析所有代理               |                |
 
 **请求示例**：
 
@@ -209,13 +208,13 @@ user_setting = api.user.query_user_setting()
 
 ## 更新用户设置
 
-**接口路径**： /api/render/setUp/updateUserSetting 
+**接口路径**： /api/render/setUp/updateUserSetting
 
 **请求参数**：
 
-| **参数**       | **类型** | 是否必须 | **说明**                   | **备注** |
-| -------------- | -------- | -------- | -------------------------- | -------- |
-| task_over_time | Integer  | Y        | 任务超时时间设置(单位：秒) |          |
+| **参数** | **类型** | 是否必须 | **说明**             | **备注** |
+| -------------- | -------------- | -------- | -------------------------- | -------------- |
+| task_over_time | Integer        | Y        | 任务超时时间设置(单位：秒) |                |
 
 **返回参数**：缺省
 
@@ -246,15 +245,15 @@ update_user_setting = api.user.update_user_settings(task_over_time=43200)
 
 **返回参数**：
 
-| **参数**             | **类型** | **说明**                                                     | **备注** |
-| -------------------- | -------- | ------------------------------------------------------------ | -------- |
-| config_bid           | String   | 配置文件传输ID                                               |          |
-| output_bid           | String   | 下载传输ID                                                   |          |
-| parent_input_bid     | String   | 对应主账号Input传输bid                                       |          |
-| input_bid            | String   | 资产上传传输ID                                               |          |
-| sub_user_output_bids | Object   | 子账号outputbids,如果访问用户是主账号，则有子账号值，否则为空 |          |
-| userId               | String   | 子账号ID                                                     |          |
-| output_bid           | String   | 子账号outputbid                                              |          |
+| **参数**       | **类型** | **说明**                                                | **备注** |
+| -------------------- | -------------- | ------------------------------------------------------------- | -------------- |
+| config_bid           | String         | 配置文件传输ID                                                |                |
+| output_bid           | String         | 下载传输ID                                                    |                |
+| parent_input_bid     | String         | 对应主账号Input传输bid                                        |                |
+| input_bid            | String         | 资产上传传输ID                                                |                |
+| sub_user_output_bids | Object         | 子账号outputbids,如果访问用户是主账号，则有子账号值，否则为空 |                |
+| userId               | String         | 子账号ID                                                      |                |
+| output_bid           | String         | 子账号outputbid                                               |                |
 
 **请求示例**：
 
@@ -286,11 +285,11 @@ user_transfer_bid = api.user.get_transfer_bid()
 
 ## 创建任务号
 
-**接口路径**： /api/render/submit/createTask 
+**接口路径**： /api/render/submit/createTask
 
 **请求参数**：
 
-| **参数**          | **类型**       | 是否必须 | **说明**               | **备注**                 |
+| **参数**    | **类型** | 是否必须 | **说明**         | **备注**           |
 | ----------------- | -------------- | -------- | ---------------------- | ------------------------ |
 | count             | Integer        | N        | 非必须，创建任务号数量 | 默认为 1                 |
 | out_user_id       | Long           | N        | 非必须，外部用户ID     | 用于区分第三方接入的用户 |
@@ -301,11 +300,11 @@ user_transfer_bid = api.user.get_transfer_bid()
 
 **返回参数**：
 
-| **参数**        | **类型**        | **说明**   | **备注** |
-| --------------- | --------------- | ---------- | -------- |
-| aliasTaskIdList | List\<String\>  | 任务ID别名 |          |
-| taskIdList      | List\<Integer\> | 任务ID     |          |
-| userId          | Long            | 用户id     |          |
+| **参数**  | **类型**  | **说明** | **备注** |
+| --------------- | --------------- | -------------- | -------------- |
+| aliasTaskIdList | List\<String\>  | 任务ID别名     |                |
+| taskIdList      | List\<Integer\> | 任务ID         |                |
+| userId          | Long            | 用户id         |                |
 
 **请求示例**：
 
@@ -342,10 +341,10 @@ create_task_id = api.task.create_task(count=1,
 
 **请求参数**：
 
-| **参数** | **类型** | 是否必须 | **说明**   | **备注** |
-| -------- | -------- | -------- | ---------- | -------- |
-| task_id  | Integer  | Y        | 提交任务ID |          |
-| producer | String   | N        | 制作人     |          |
+| **参数** | **类型** | 是否必须 | **说明** | **备注** |
+| -------------- | -------------- | -------- | -------------- | -------------- |
+| task_id        | Integer        | Y        | 提交任务ID     |                |
+| producer       | String         | N        | 制作人         |                |
 
 **返回参数**：缺省
 
@@ -372,30 +371,30 @@ submit_task = api.task.submit_task(task_id=create_task_id[0])
 
 ## 获取分析错误码
 
-**接口路径:**  /api/render/submit/queryAnalyseErrorDetail 
+**接口路径:**  /api/render/submit/queryAnalyseErrorDetail
 
 **请求参数**：
 
-| **参数** | **类型** | 是否必须 | **说明**       | **备注**                    |
-| -------- | -------- | -------- | -------------- | --------------------------- |
-| code     | String   | N        | 必须值，错误码 | codes和code任一必填         |
-| codes    | String   | N        | 错误码列表     | codes和code任一必填         |
-| language | String   | N        | 非必须，语言   | “0”：中文（默认） "1"：英文 |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**                |
+| -------------- | -------------- | -------- | -------------- | ----------------------------- |
+| code           | String         | N        | 必须值，错误码 | codes和code任一必填           |
+| codes          | String         | N        | 错误码列表     | codes和code任一必填           |
+| language       | String         | N        | 非必须，语言   | “0”：中文（默认） "1"：英文 |
 
 **返回参数**：List\<CodeInfo\>
 
-| **参数**         | **类型** | **说明**         | **备注**                     |
-|------------------|----------|------------------|------------------------------|
-| id               |          |                  |                              |
-| code             | Integer  | 错误码           |                              |
-| type             | Integer  | 类型             | 0警告-可忽略，1错误-不可忽略 |
-| languageFlag     | Integer  | 语言类型         | 0中文，1英文                 |
-| desDescriptionCn | String   | 中文描述         |                              |
-| desSolutionCn    | String   | 解决方案         |                              |
-| solutionPath     | String   | 解决方案连接     |                              |
-| isRepair         | Integer  | 是否可修复       | 1 可修复，0不可修复          |
-| isOpen           | Integer  | 错误是否开启拦截 | 0 不开启，1 开启             |
-| updateTime       | Date     | 最后更新时间     |                              |
+| **参数**   | **类型** | **说明**   | **备注**               |
+| ---------------- | -------------- | ---------------- | ---------------------------- |
+| id               |                |                  |                              |
+| code             | Integer        | 错误码           |                              |
+| type             | Integer        | 类型             | 0警告-可忽略，1错误-不可忽略 |
+| languageFlag     | Integer        | 语言类型         | 0中文，1英文                 |
+| desDescriptionCn | String         | 中文描述         |                              |
+| desSolutionCn    | String         | 解决方案         |                              |
+| solutionPath     | String         | 解决方案连接     |                              |
+| isRepair         | Integer        | 是否可修复       | 1 可修复，0不可修复          |
+| isOpen           | Integer        | 错误是否开启拦截 | 0 不开启，1 开启             |
+| updateTime       | Date           | 最后更新时间     |                              |
 
 **请求示例**：
 
@@ -437,11 +436,11 @@ error_detail = api.query.error_detail(code="50001")
 
 **请求参数**：
 
-| **参数**       | **类型**        | 是否必须 | **说明**                         | **备注**                 |
+| **参数** | **类型**  | 是否必须 | **说明**                   | **备注**           |
 | -------------- | --------------- | -------- | -------------------------------- | ------------------------ |
 | page_num       | Integer         | N        | 当前页数                         | 默认:1                   |
 | page_size      | Integer         | N        | 每页显示数量                     | 默认:100                 |
-| status_list    | List\<Integer\> | N        | 状态码列表，查询列表中状态的任务 | 参见任务状态说明              |
+| status_list    | List\<Integer\> | N        | 状态码列表，查询列表中状态的任务 | 参见任务状态说明         |
 | search_keyword | String          | N        | 场景名或者作业ID                 | 模糊搜索                 |
 | start_time     | String          | N        | 搜索提交时间下限                 | 格式 yyyy-MM-dd HH:mm:ss |
 | end_time       | String          | N        | 搜索提交时间上限                 | 格式 yyyy-MM-dd HH:mm:ss |
@@ -449,78 +448,78 @@ error_detail = api.query.error_detail(code="50001")
 
 **任务状态说明**：
 
-| **状态**            | **状态码** | **说明**       |
-|---------------------|------------|----------------|
-| WAITING             | 0          | 等待           |
-| RENDERING           | 5          | 渲染中         |
-| PRE_RENDERING       | 8          | 预处理中       |
-| STOP                | 10         | 停止           |
-| ARREARAGE_STOP      | 20         | 欠费停止       |
-| TIME_OUT_STOP       | 23         | 超时停止       |
-| FINISHED            | 25         | 已完成         |
-| FINISHED_HAS_FAILED | 30         | 已完成有失败帧  |
-| ABANDON             | 35         | 放弃           |
-| FINISHED_TEST       | 40         | 测试完成       |
-| FAILED              | 45         | 失败           |
-| ANALYSE             | 50         | 分析中         |
-| FINISHED_HAS_STOPPED             | 70         | 已完成有停止帧  |
+| **状态**       | **状态码** | **说明** |
+| -------------------- | ---------------- | -------------- |
+| WAITING              | 0                | 等待           |
+| RENDERING            | 5                | 渲染中         |
+| PRE_RENDERING        | 8                | 预处理中       |
+| STOP                 | 10               | 停止           |
+| ARREARAGE_STOP       | 20               | 欠费停止       |
+| TIME_OUT_STOP        | 23               | 超时停止       |
+| FINISHED             | 25               | 已完成         |
+| FINISHED_HAS_FAILED  | 30               | 已完成有失败帧 |
+| ABANDON              | 35               | 放弃           |
+| FINISHED_TEST        | 40               | 测试完成       |
+| FAILED               | 45               | 失败           |
+| ANALYSE              | 50               | 分析中         |
+| FINISHED_HAS_STOPPED | 70               | 已完成有停止帧 |
 
 **返回参数**：List\<TaskInfo\>
 
-| **参数**              | **类型**             | **说明**                   | **备注**                                                     |
-| --------------------- | -------------------- | -------------------------- | ------------------------------------------------------------ |
-| sceneName             | String               | 场景名                     |                                                              |
-| id                    | Integer              | 任务id                     |                                                              |
-| taskAlias             | String               | 任务别名                   |                                                              |
-| taskStatus            | Byte                 | 任务状态                   | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中 |
-| statusText            | String               | 任务状态文本               |                                                              |
-| preTaskStatus         | Byte                 | 预处理任务状态             |                                                              |
-| preStatusText         | String               | 预处理状态文本             |                                                              |
-| totalFrames           | Integer              | 总帧数                     |                                                              |
-| abortFrames           | Integer              | 放弃帧数                   |                                                              |
-| executingFrames       | Integer              | 正在运行的帧数             |                                                              |
-| doneFrames            | Integer              | 完成的帧数                 |                                                              |
-| failedFrames          | Integer              | 失败帧数                   |                                                              |
-| framesRange           | String               | 帧范围                     |                                                              |
-| projectName           | String               | 项目名                     |                                                              |
-| renderConsume         | BigDecimal           | 任务渲染消费的总费用       |                                                              |
-| taskArrears           | BigDecimal           | 任务欠费金额               |                                                              |
-| submitDate            | Date                 | 提交时间                   |                                                              |
-| startTime             | Date                 | 开始时间                   |                                                              |
-| completedDate         | Date                 | 完成时间                   |                                                              |
-| renderDuration        | Long                 | 任务渲染总时长             | 单位：秒                                                     |
-| userName              | String               | 用户名                     |                                                              |
-| producer              | String               | 制作人                     |                                                              |
-| taskLevel             | Byte                 | 任务优先级                 |                                                              |
-| taskUserLevel         | Integer              | 用户层面的优先级           |                                                              |
-| taskLimit             | Integer              | 任务机器限制               |                                                              |
-| taskOverTime          | Long                 | 任务超时提醒               |                                                              |
-| outputFileName        | String               | 输出文件名                 |                                                              |
-| munuTaskId            | String               | 调度器id                   |                                                              |
-| layerParentId         | String               | 针对maya任务，层父id       |                                                              |
-| cgId                  | Integer              | 任务类型                   | 2001/maya，2000/max                                          |
-| taskKeyValueVo        | Object               | 任务关键字集合             |                                                              |
-| userAccountConsume    | Bigdecimal           | 用户账户扣费               |                                                              |
-| couponConsume         | Bigdecimal           | 优惠券扣费                 |                                                              |
-| isOpen                | Byte                 | 前端的展开按钮是否展开     |                                                              |
-| taskType              | String               | 任务类型                   | /预处理,/光子渲染,/渲染主图                                  |
-| renderCamera          | String               | 渲染相机                   |                                                              |
-| cloneParentId         | Integer              | 克隆任务挂在那个任务下的id |                                                              |
-| cloneOriginalId       | Integer              | 从哪个任务克隆的           |                                                              |
-| shareMainCapital      | Byte                 | 该任务是否共享主账号资产   | 0 不共享 ,  1 共享                                           |
-| taskRam               | Integer              | 任务渲染内存               |                                                              |
-| respRenderingTaskList | **List\<TaskInfo\>** | 展开的任务的子任务         | 跟此对象一样                                                 |
-| layerName             | String               | 层名                       |                                                              |
-| taskTypeText          | String               | 任务类型                   | 光子/主图                                                    |
-| isDelete              | Byte                 | 是否删除                   | 0：已删除，1：未删除                                         |
+| **参数**        | **类型**             | **说明**             | **备注**                                                                                                                            |
+| --------------------- | -------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| sceneName             | String                     | 场景名                     |                                                                                                                                           |
+| id                    | Integer                    | 任务id                     |                                                                                                                                           |
+| taskAlias             | String                     | 任务别名                   |                                                                                                                                           |
+| taskStatus            | Byte                       | 任务状态                   | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中 |
+| statusText            | String                     | 任务状态文本               |                                                                                                                                           |
+| preTaskStatus         | Byte                       | 预处理任务状态             |                                                                                                                                           |
+| preStatusText         | String                     | 预处理状态文本             |                                                                                                                                           |
+| totalFrames           | Integer                    | 总帧数                     |                                                                                                                                           |
+| abortFrames           | Integer                    | 放弃帧数                   |                                                                                                                                           |
+| executingFrames       | Integer                    | 正在运行的帧数             |                                                                                                                                           |
+| doneFrames            | Integer                    | 完成的帧数                 |                                                                                                                                           |
+| failedFrames          | Integer                    | 失败帧数                   |                                                                                                                                           |
+| framesRange           | String                     | 帧范围                     |                                                                                                                                           |
+| projectName           | String                     | 项目名                     |                                                                                                                                           |
+| renderConsume         | BigDecimal                 | 任务渲染消费的总费用       |                                                                                                                                           |
+| taskArrears           | BigDecimal                 | 任务欠费金额               |                                                                                                                                           |
+| submitDate            | Date                       | 提交时间                   |                                                                                                                                           |
+| startTime             | Date                       | 开始时间                   |                                                                                                                                           |
+| completedDate         | Date                       | 完成时间                   |                                                                                                                                           |
+| renderDuration        | Long                       | 任务渲染总时长             | 单位：秒                                                                                                                                  |
+| userName              | String                     | 用户名                     |                                                                                                                                           |
+| producer              | String                     | 制作人                     |                                                                                                                                           |
+| taskLevel             | Byte                       | 任务优先级                 |                                                                                                                                           |
+| taskUserLevel         | Integer                    | 用户层面的优先级           |                                                                                                                                           |
+| taskLimit             | Integer                    | 任务机器限制               |                                                                                                                                           |
+| taskOverTime          | Long                       | 任务超时提醒               |                                                                                                                                           |
+| outputFileName        | String                     | 输出文件名                 |                                                                                                                                           |
+| munuTaskId            | String                     | 调度器id                   |                                                                                                                                           |
+| layerParentId         | String                     | 针对maya任务，层父id       |                                                                                                                                           |
+| cgId                  | Integer                    | 任务类型                   | 2001/maya，2000/max                                                                                                                       |
+| taskKeyValueVo        | Object                     | 任务关键字集合             |                                                                                                                                           |
+| userAccountConsume    | Bigdecimal                 | 用户账户扣费               |                                                                                                                                           |
+| couponConsume         | Bigdecimal                 | 优惠券扣费                 |                                                                                                                                           |
+| isOpen                | Byte                       | 前端的展开按钮是否展开     |                                                                                                                                           |
+| taskType              | String                     | 任务类型                   | /预处理,/光子渲染,/渲染主图                                                                                                               |
+| renderCamera          | String                     | 渲染相机                   |                                                                                                                                           |
+| cloneParentId         | Integer                    | 克隆任务挂在那个任务下的id |                                                                                                                                           |
+| cloneOriginalId       | Integer                    | 从哪个任务克隆的           |                                                                                                                                           |
+| shareMainCapital      | Byte                       | 该任务是否共享主账号资产   | 0 不共享 ,  1 共享                                                                                                                        |
+| taskRam               | Integer                    | 任务渲染内存               |                                                                                                                                           |
+| respRenderingTaskList | **List\<TaskInfo\>** | 展开的任务的子任务         | 跟此对象一样                                                                                                                              |
+| layerName             | String                     | 层名                       |                                                                                                                                           |
+| taskTypeText          | String                     | 任务类型                   | 光子/主图                                                                                                                                 |
+| isDelete              | Byte                       | 是否删除                   | 0：已删除，1：未删除                                                                                                                      |
 
 **taskKeyValueVo实体**
 
-| **参数**         | **类型** | **说明** | **备注** |
-|------------------|----------|----------|----------|
-| tiles            | String   | 分块数   |          |
-| allCamera        | String   | 全部相机 |          |
-| renderableCamera | String   | 渲染相机 |          |
+| **参数**   | **类型** | **说明** | **备注** |
+| ---------------- | -------------- | -------------- | -------------- |
+| tiles            | String         | 分块数         |                |
+| allCamera        | String         | 全部相机       |                |
+| renderableCamera | String         | 渲染相机       |                |
 
 **请求示例**：
 
@@ -704,13 +703,13 @@ task_list = api.query.get_task_list(page_num=1, page_size=1)
 
 ## 停止任务
 
-**接口路径**： /api/render/handle/stopTask 
+**接口路径**： /api/render/handle/stopTask
 
 **请求参数**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**   | **备注** |
-| --------------- | --------------- | -------- | ---------- | -------- |
-| task_param_list | List\<Integer\> | Y        | 任务号集合 |          |
+| **参数**  | **类型**  | 是否必须 | **说明** | **备注** |
+| --------------- | --------------- | -------- | -------------- | -------------- |
+| task_param_list | List\<Integer\> | Y        | 任务号集合     |                |
 
 **返回参数**：缺省
 
@@ -735,13 +734,13 @@ stop_task = api.task.stop_task(task_param_list=[13798105])
 
 ## 开始任务
 
-**接口路径**： /api/render/handle/startTask 
+**接口路径**： /api/render/handle/startTask
 
 **请求参数**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**   | **备注** |
-| --------------- | --------------- | -------- | ---------- | -------- |
-| task_param_list | List\<Integer\> | Y        | 任务号集合 |          |
+| **参数**  | **类型**  | 是否必须 | **说明** | **备注** |
+| --------------- | --------------- | -------- | -------------- | -------------- |
+| task_param_list | List\<Integer\> | Y        | 任务号集合     |                |
 
 **返回参数**：缺省
 
@@ -766,13 +765,13 @@ start_task = api.task.start_task(task_param_list=[13798105])
 
 ## 放弃任务
 
-**接口路径**： /api/render/handle/abandonTask 
+**接口路径**： /api/render/handle/abandonTask
 
 **请求参数**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**   | **备注** |
-| --------------- | --------------- | -------- | ---------- | -------- |
-| task_param_list | List\<Integer\> | Y        | 任务号集合 |          |
+| **参数**  | **类型**  | 是否必须 | **说明** | **备注** |
+| --------------- | --------------- | -------- | -------------- | -------------- |
+| task_param_list | List\<Integer\> | Y        | 任务号集合     |                |
 
 **返回参数**：缺省
 
@@ -801,9 +800,9 @@ abort_task = api.task.abort_task(task_param_list=[13798105])
 
 **请求参数**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**   | **备注** |
-| --------------- | --------------- | -------- | ---------- | -------- |
-| task_param_list | List\<Integer\> | Y        | 任务号集合 |          |
+| **参数**  | **类型**  | 是否必须 | **说明** | **备注** |
+| --------------- | --------------- | -------- | -------------- | -------------- |
+| task_param_list | List\<Integer\> | Y        | 任务号集合     |                |
 
 **返回参数**：缺省
 
@@ -828,42 +827,42 @@ delete_task = api.task.delete_task(task_param_list=[13798105])
 
 ## 获取任务单页渲染帧详情
 
-**接口路径**：  /api/render/handle/queryTaskFrames  
+**接口路径**：  /api/render/handle/queryTaskFrames
 
 **请求参数**：
 
-| **参数**       | **类型** | 是否必须 | **说明**                 | **备注**                                         |
-| -------------- | -------- | -------- | ------------------------ | ------------------------------------------------ |
-| task_id        | Integer  | Y        | 任务ID号                 | 任务ID号，是任务的唯一标识，必填字段             |
-| search_keyword | String   | N        | 根据一机渲多帧名进行查询 | 是一个字符串，根据一机渲多帧名这个字段名进行查询 |
-| page_num       | Integer  | N        | 当前页编号               | 默认1                                            |
-| page_size      | Integer  | N        | 每页显示数据大小         | 默认100                                          |
+| **参数** | **类型** | 是否必须 | **说明**           | **备注**                                   |
+| -------------- | -------------- | -------- | ------------------------ | ------------------------------------------------ |
+| task_id        | Integer        | Y        | 任务ID号                 | 任务ID号，是任务的唯一标识，必填字段             |
+| search_keyword | String         | N        | 根据一机渲多帧名进行查询 | 是一个字符串，根据一机渲多帧名这个字段名进行查询 |
+| page_num       | Integer        | N        | 当前页编号               | 默认1                                            |
+| page_size      | Integer        | N        | 每页显示数据大小         | 默认100                                          |
 
 **返回参数**：List\<FrameInfo\>
 
-| **参数**         | **类型** | **说明**            | **备注**                                                                                                                                                           |
-|------------------|----------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id               |          |                     |                                                                                                                                                                    |
-| userId           | Long     | 用户ID              |                                                                                                                                                                    |
-| framePrice       | Double   | 渲染价格            |                                                                                                                                                                    |
-| feeType          | Integer  | 扣费类型            | 0 按量，1 包机，2 包项目                                                                                                                                           |
-| platform         | Integer  | 平台                |                                                                                                                                                                    |
-| frameIndex       | String   | 帧序列名            |                                                                                                                                                                    |
-| frameBlock       | String   | 当前帧块数          |                                                                                                                                                                    |
-| frameStatus      | Integer  | 当前帧状态          | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中 |
-| feeAmount        | Double   | 余额扣费            |                                                                                                                                                                    |
-| couponFee        | Double   | 代金券扣费          |                                                                                                                                                                    |
-| startTime        | Long     | 开始时间（毫秒）    |                                                                                                                                                                    |
-| endTime          | Long     | 结束时间（毫秒）    |                                                                                                                                                                    |
-| frameExecuteTime | Long     | 渲染帧耗时          |                                                                                                                                                                    |
-| frameStatusText  | String   | 帧状态描述          |                                                                                                                                                                    |
-| arrearsFee       | Double   | 渲染帧欠费金额      |                                                                                                                                                                    |
-| taskId           | Long     | 任务ID              |                                                                                                                                                                    |
-| frameType        | Integer  | 帧类型              | 1/预渲染(只有一帧,多相机情况也只有一帧),2/光子帧,3/合并光子帧,4/优先帧,5/渲染主图帧,6/maya/max优先渲染合成帧,7/maya/max渲染主图合成帧,8/houdini结算帧，9/max通道帧 |
-| recommitFlag     | Integer  | 重提次数            | 重提标识默认是0,按次数递增                                                                                                                                         |
-| taskOverTime     | Integer  | 超时时间            | 帧超时时间                                                                                                                                                         |
-| gopName          | String   | houdini结算节点名称 |                                                                                                                                                                    |
-| frameRam         | Integer  | 帧任务渲染内存      | 如果为空说明没有内存要求                                                                                                                                           |
+| **参数**   | **类型** | **说明**      | **备注**                                                                                                                                                     |
+| ---------------- | -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id               |                |                     |                                                                                                                                                                    |
+| userId           | Long           | 用户ID              |                                                                                                                                                                    |
+| framePrice       | Double         | 渲染价格            |                                                                                                                                                                    |
+| feeType          | Integer        | 扣费类型            | 0 按量，1 包机，2 包项目                                                                                                                                           |
+| platform         | Integer        | 平台                |                                                                                                                                                                    |
+| frameIndex       | String         | 帧序列名            |                                                                                                                                                                    |
+| frameBlock       | String         | 当前帧块数          |                                                                                                                                                                    |
+| frameStatus      | Integer        | 当前帧状态          | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中                          |
+| feeAmount        | Double         | 余额扣费            |                                                                                                                                                                    |
+| couponFee        | Double         | 代金券扣费          |                                                                                                                                                                    |
+| startTime        | Long           | 开始时间（毫秒）    |                                                                                                                                                                    |
+| endTime          | Long           | 结束时间（毫秒）    |                                                                                                                                                                    |
+| frameExecuteTime | Long           | 渲染帧耗时          |                                                                                                                                                                    |
+| frameStatusText  | String         | 帧状态描述          |                                                                                                                                                                    |
+| arrearsFee       | Double         | 渲染帧欠费金额      |                                                                                                                                                                    |
+| taskId           | Long           | 任务ID              |                                                                                                                                                                    |
+| frameType        | Integer        | 帧类型              | 1/预渲染(只有一帧,多相机情况也只有一帧),2/光子帧,3/合并光子帧,4/优先帧,5/渲染主图帧,6/maya/max优先渲染合成帧,7/maya/max渲染主图合成帧,8/houdini结算帧，9/max通道帧 |
+| recommitFlag     | Integer        | 重提次数            | 重提标识默认是0,按次数递增                                                                                                                                         |
+| taskOverTime     | Integer        | 超时时间            | 帧超时时间                                                                                                                                                         |
+| gopName          | String         | houdini结算节点名称 |                                                                                                                                                                    |
+| frameRam         | Integer        | 帧任务渲染内存      | 如果为空说明没有内存要求                                                                                                                                           |
 
 **请求示例**：
 
@@ -945,16 +944,14 @@ task_frame = api.query.task_frames(task_id=13790691, page_num=1, page_size=1)
 
 ## 获取指定任务某几页帧详情
 
-[^api]: Add in v2.4.0
-
 **请求参数**：
 
-| **参数**   | **类型** | 是否必须 | **说明**                            | **备注**                                     |
-| ---------- | -------- | -------- | ----------------------------------- | -------------------------------------------- |
-| task_id    | Integer  | Y        | 子任务号                            | 如作业ID为“2W35736251”，task_id即为 35736251 |
-| start_page | Integer  | N        | 查询起始页， 默认为1                |                                              |
-| end_page   | Integer  | N        | 查询结束页，默认为2000              |                                              |
-| page_size  | Integer  | N        | 指定每一页显示帧数，默认为最大值100 |                                              |
+| **参数** | **类型** | 是否必须 | **说明**                      | **备注**                                 |
+| -------------- | -------------- | -------- | ----------------------------------- | ---------------------------------------------- |
+| task_id        | Integer        | Y        | 子任务号                            | 如作业ID为“2W35736251”，task_id即为 35736251 |
+| start_page     | Integer        | N        | 查询起始页， 默认为1                |                                                |
+| end_page       | Integer        | N        | 查询结束页，默认为2000              |                                                |
+| page_size      | Integer        | N        | 指定每一页显示帧数，默认为最大值100 |                                                |
 
 **请求示例**：
 
@@ -1045,14 +1042,14 @@ all_frames = api.query.get_all_frames(task_id=35736251)
 
 **返回参数**：
 
-| **参数**             | **类型** | **说明**   | **备注** |
-| -------------------- | -------- | ---------- | -------- |
-| executingFramesTotal | Integer  | 渲染中帧数 |          |
-| doneFramesTotal      | Integer  | 完成帧数   |          |
-| failedFramesTotal    | Integer  | 失败帧数   |          |
-| waitingFramesTotal   | Integer  | 等待帧数   |          |
-| abandonFramesTotal   | Integer  | 放弃帧数   |          |
-| totalFrames          | Integer  | 渲染总帧数 |          |
+| **参数**       | **类型** | **说明** | **备注** |
+| -------------------- | -------------- | -------------- | -------------- |
+| executingFramesTotal | Integer        | 渲染中帧数     |                |
+| doneFramesTotal      | Integer        | 完成帧数       |                |
+| failedFramesTotal    | Integer        | 失败帧数       |                |
+| waitingFramesTotal   | Integer        | 等待帧数       |                |
+| abandonFramesTotal   | Integer        | 放弃帧数       |                |
+| totalFrames          | Integer        | 渲染总帧数     |                |
 
 **请求示例**：
 
@@ -1086,10 +1083,10 @@ all_frame_status = api.query.all_frame_status()
 
 **请求参数**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**                                 | **备注** |
-| --------------- | --------------- | -------- | ---------------------------------------- | -------- |
-| task_param_list | List\<Integer\> | Y        | 任务号集合                               |          |
-| status          | List\<Integer>  | N        | 重提的帧任务状态集合，不填表示重提失败帧 |          |
+| **参数**  | **类型**  | 是否必须 | **说明**                           | **备注** |
+| --------------- | --------------- | -------- | ---------------------------------------- | -------------- |
+| task_param_list | List\<Integer\> | Y        | 任务号集合                               |                |
+| status          | List\<Integer>  | N        | 重提的帧任务状态集合，不填表示重提失败帧 |                |
 
 **返回参数**：缺省
 
@@ -1118,12 +1115,12 @@ restart_failed_frames = api.query.restart_failed_frames(task_param_list=[1378898
 
 **请求参数**：
 
-| **参数**   | **类型**        | 是否必须 | **说明**     | **备注**                                           |
-| ---------- | --------------- | -------- | ------------ | -------------------------------------------------- |
-| task_id    | Integer         | N        | 任务ID       | task_id和ids_list任选其一必填                      |
-| ids_list   | List\<Integer\> | N        | 帧ID集合     | task_id和ids_list任选其一必填, select_all为0时生效 |
-| select_all | Integer         | N        | 是否全部重提 | 1全部重提，0指定帧重提                             |
-| status     | List\<Integer>  | N        | 帧状态       | 只有传taskId才生效                                 |
+| **参数** | **类型**  | 是否必须 | **说明** | **备注**                                     |
+| -------------- | --------------- | -------- | -------------- | -------------------------------------------------- |
+| task_id        | Integer         | N        | 任务ID         | task_id和ids_list任选其一必填                      |
+| ids_list       | List\<Integer\> | N        | 帧ID集合       | task_id和ids_list任选其一必填, select_all为0时生效 |
+| select_all     | Integer         | N        | 是否全部重提   | 1全部重提，0指定帧重提                             |
+| status         | List\<Integer>  | N        | 帧状态         | 只有传taskId才生效                                 |
 
 **返回参数**：缺省
 
@@ -1152,12 +1149,12 @@ restart_frame = api.query.restart_frame(task_id=14362099, select_all=1)
 
 **请求参数**：
 
-| **参数**   | **类型**        | 是否必须 | **说明**     | **备注**                                           |
-| ---------- | --------------- | -------- | ------------| -------------------------------------------------- |
-| task_id    | Integer         | Y        | 任务ID      |                                        |
-| ids_list   | List\<Integer\> | N        | 任务ID集合   |  可选                                  |
-| select_all | Integer         | N        | 全选 | 1代表用户全选操作，0代表用户非全选（此时ids必填）                           |
-| status     | List\<Byte>     | N        | 帧状态       | 只有传selectAll=1才生效                                 |
+| **参数** | **类型**  | 是否必须 | **说明** | **备注**                                    |
+| -------------- | --------------- | -------- | -------------- | ------------------------------------------------- |
+| task_id        | Integer         | Y        | 任务ID         |                                                   |
+| ids_list       | List\<Integer\> | N        | 任务ID集合     | 可选                                              |
+| select_all     | Integer         | N        | 全选           | 1代表用户全选操作，0代表用户非全选（此时ids必填） |
+| status         | List\<Byte>     | N        | 帧状态         | 只有传selectAll=1才生效                           |
 
 **返回参数**：缺省
 
@@ -1182,14 +1179,12 @@ stopTaskFrames = api.query.stop_frame(task_id=14362099)
 
 ## 根据帧序号重提任务指定的帧
 
-[^api]: Add in v2.4.0 
-
 **请求参数**：
 
-| **参数**      | **类型**  | **说明**             | **备注**                                     |
-| ------------- | --------- | -------------------- | -------------------------------------------- |
-| task_id       | Integer   | 子任务ID             | 如作业ID为“2W35736251”，task_id即为 35736251 |
-| restartframes | List[str] | 需要重提的帧序号列表 | 例如：["6", "7-9[1]"]                        |
+| **参数** | **类型** | **说明**       | **备注**                                 |
+| -------------- | -------------- | -------------------- | ---------------------------------------------- |
+| task_id        | Integer        | 子任务ID             | 如作业ID为“2W35736251”，task_id即为 35736251 |
+| restartframes  | List[str]      | 需要重提的帧序号列表 | 例如：["6", "7-9[1]"]                          |
 
 **请求示例**：
 
@@ -1205,18 +1200,18 @@ restart_frame = api.query.get_custome_frames(task_id=37439351, restartframes=["6
 
 **请求参数**：
 
-| **参数**      | **类型**        | **说明**      | **备注** |
-| ------------- | --------------- |-------------| -------- |
-| renderingType | String | 渲染类型：render |          |
-| pageNum | Integer | 页码      |          |
-| pageSize | Integer| 页数      |          |
-| id | Integer | 帧id      |          |
+| **参数** | **类型** | **说明**   | **备注** |
+| -------------- | -------------- | ---------------- | -------------- |
+| renderingType  | String         | 渲染类型：render |                |
+| pageNum        | Integer        | 页码             |                |
+| pageSize       | Integer        | 页数             |                |
+| id             | Integer        | 帧id             |                |
 
 **返回参数**：List[String]
 
-| **参数**      | **类型**        | **说明** | **备注** |
-| ------------- | --------------- |--------| -------- |
-| items | List[String]| 数据     |          |
+| **参数** | **类型** | **说明** | **备注** |
+| -------------- | -------------- | -------------- | -------------- |
+| items          | List[String]   | 数据           |                |
 
 **请求示例**：
 
@@ -1257,58 +1252,58 @@ log_res = api.query.get_render_log(renderingType="render", pageNum=0, pageSize=1
 
 **请求参数**：
 
-| **参数**      | **类型**        | **说明**   | **备注** |
-| ------------- | --------------- | ---------- | -------- |
-| task_ids_list | List\<Integer\> | 任务ID集合 |          |
+| **参数** | **类型**  | **说明** | **备注** |
+| -------------- | --------------- | -------------- | -------------- |
+| task_ids_list  | List\<Integer\> | 任务ID集合     |                |
 
 **返回参数**：List\<TaskInfo>
 
-| **参数**              | **类型**             | **说明**                   | **备注**                                                                                                      |
-|-----------------------|----------------------|----------------------------|---------------------------------------------------------------------------------------------------------------|
-| sceneName             | String               | 场景名                     |                                                                                                               |
-| id                    | Integer              | 任务id                     |                                                                                                               |
-| taskAlias             | String               | 任务别名                   |                                                                                                               |
-| taskStatus            | Byte                 | 任务状态                   | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中 ||
-| statusText            | String               | 任务状态文本               |                                                                                                               |
-| preTaskStatus         | Byte                 | 预处理任务状态             |                                                                                                               |
-| preStatusText         | String               | 预处理状态文本             |                                                                                                               |
-| totalFrames           | Integer              | 总帧数                     |                                                                                                               |
-| abortFrames           | Integer              | 放弃帧数                   |                                                                                                               |
-| executingFrames       | Integer              | 正在运行的帧数             |                                                                                                               |
-| doneFrames            | Integer              | 完成的帧数                 |                                                                                                               |
-| failedFrames          | Integer              | 失败帧数                   |                                                                                                               |
-| framesRange           | String               | 帧范围                     |                                                                                                               |
-| projectName           | String               | 项目名                     |                                                                                                               |
-| renderConsume         | BigDecimal           | 任务渲染消费的总费用       |                                                                                                               |
-| taskArrears           | BigDecimal           | 任务欠费金额               |                                                                                                               |
-| submitDate            | Date                 | 提交时间                   |                                                                                                               |
-| startTime             | Date                 | 开始时间                   |                                                                                                               |
-| completedDate         | Date                 | 完成时间                   |                                                                                                               |
-| renderDuration        | Long                 | 任务渲染总时长             | 单位：秒                                                                                                      |
-| userName              | String               | 用户名                     |                                                                                                               |
-| producer              | String               | 制作人                     |                                                                                                               |
-| taskLevel             | Byte                 | 任务优先级                 |                                                                                                               |
-| taskUserLevel         | Integer              | 用户层面的优先级           |                                                                                                               |
-| taskLimit             | Integer              | 任务机器限制               |                                                                                                               |
-| taskOverTime          | Long                 | 任务超时提醒               |                                                                                                               |
-| outputFileName        | String               | 输出文件名                 |                                                                                                               |
-| munuTaskId            | String               | 调度器id                   |                                                                                                               |
-| layerParentId         | String               | 针对maya任务，层父id       |                                                                                                               |
-| cgId                  | Integer              | 任务类型                   | 2001/maya，2000/max                                                                                           |
-| taskKeyValueVo        | Object               | 任务关键字集合             |                                                                                                               |
-| userAccountConsume    | Bigdecimal           | 用户账户扣费               |                                                                                                               |
-| couponConsume         | Bigdecimal           | 优惠券扣费                 |                                                                                                               |
-| isOpen                | Byte                 | 前端的展开按钮是否展开     |                                                                                                               |
-| taskType              | String               | 任务类型                   | /预处理,/光子渲染,/渲染主图                                                                                   |
-| renderCamera          | String               | 渲染相机                   |                                                                                                               |
-| cloneParentId         | Integer              | 克隆任务挂在那个任务下的id |                                                                                                               |
-| cloneOriginalId       | Integer              | 从哪个任务克隆的           |                                                                                                               |
-| shareMainCapital      | Byte                 | 该任务是否共享主账号资产   | (0 不共享 1共享)                                                                                              |
-| taskRam               | Integer              | 任务渲染内存               |                                                                                                               |
-| respRenderingTaskList | **List\<TaskInfo\>** | 展开的任务的子任务         | 跟此对象一样                                                                                                  |
-| layerName             | String               | 层名                       |                                                                                                               |
-| taskTypeText          | String               | 任务类型                   | 光子/主图                                                                                                     |
-| isDelete              | Byte                 | 是否删除                   | 0：已删除，1：未删除                                                                                          |
+| **参数**        | **类型**             | **说明**             | **备注**                                                                                                                            |
+| --------------------- | -------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| sceneName             | String                     | 场景名                     |                                                                                                                                           |
+| id                    | Integer                    | 任务id                     |                                                                                                                                           |
+| taskAlias             | String                     | 任务别名                   |                                                                                                                                           |
+| taskStatus            | Byte                       | 任务状态                   | 0/等待，5/渲染，10/停止，15/用户停止，20/因欠费停止，25/完成，30/完成包含失败帧，35/放弃，40/测试完成，45/失败，50/分析中，100/状态更新中 |
+| statusText            | String                     | 任务状态文本               |                                                                                                                                           |
+| preTaskStatus         | Byte                       | 预处理任务状态             |                                                                                                                                           |
+| preStatusText         | String                     | 预处理状态文本             |                                                                                                                                           |
+| totalFrames           | Integer                    | 总帧数                     |                                                                                                                                           |
+| abortFrames           | Integer                    | 放弃帧数                   |                                                                                                                                           |
+| executingFrames       | Integer                    | 正在运行的帧数             |                                                                                                                                           |
+| doneFrames            | Integer                    | 完成的帧数                 |                                                                                                                                           |
+| failedFrames          | Integer                    | 失败帧数                   |                                                                                                                                           |
+| framesRange           | String                     | 帧范围                     |                                                                                                                                           |
+| projectName           | String                     | 项目名                     |                                                                                                                                           |
+| renderConsume         | BigDecimal                 | 任务渲染消费的总费用       |                                                                                                                                           |
+| taskArrears           | BigDecimal                 | 任务欠费金额               |                                                                                                                                           |
+| submitDate            | Date                       | 提交时间                   |                                                                                                                                           |
+| startTime             | Date                       | 开始时间                   |                                                                                                                                           |
+| completedDate         | Date                       | 完成时间                   |                                                                                                                                           |
+| renderDuration        | Long                       | 任务渲染总时长             | 单位：秒                                                                                                                                  |
+| userName              | String                     | 用户名                     |                                                                                                                                           |
+| producer              | String                     | 制作人                     |                                                                                                                                           |
+| taskLevel             | Byte                       | 任务优先级                 |                                                                                                                                           |
+| taskUserLevel         | Integer                    | 用户层面的优先级           |                                                                                                                                           |
+| taskLimit             | Integer                    | 任务机器限制               |                                                                                                                                           |
+| taskOverTime          | Long                       | 任务超时提醒               |                                                                                                                                           |
+| outputFileName        | String                     | 输出文件名                 |                                                                                                                                           |
+| munuTaskId            | String                     | 调度器id                   |                                                                                                                                           |
+| layerParentId         | String                     | 针对maya任务，层父id       |                                                                                                                                           |
+| cgId                  | Integer                    | 任务类型                   | 2001/maya，2000/max                                                                                                                       |
+| taskKeyValueVo        | Object                     | 任务关键字集合             |                                                                                                                                           |
+| userAccountConsume    | Bigdecimal                 | 用户账户扣费               |                                                                                                                                           |
+| couponConsume         | Bigdecimal                 | 优惠券扣费                 |                                                                                                                                           |
+| isOpen                | Byte                       | 前端的展开按钮是否展开     |                                                                                                                                           |
+| taskType              | String                     | 任务类型                   | /预处理,/光子渲染,/渲染主图                                                                                                               |
+| renderCamera          | String                     | 渲染相机                   |                                                                                                                                           |
+| cloneParentId         | Integer                    | 克隆任务挂在那个任务下的id |                                                                                                                                           |
+| cloneOriginalId       | Integer                    | 从哪个任务克隆的           |                                                                                                                                           |
+| shareMainCapital      | Byte                       | 该任务是否共享主账号资产   | (0 不共享 1共享)                                                                                                                          |
+| taskRam               | Integer                    | 任务渲染内存               |                                                                                                                                           |
+| respRenderingTaskList | **List\<TaskInfo\>** | 展开的任务的子任务         | 跟此对象一样                                                                                                                              |
+| layerName             | String                     | 层名                       |                                                                                                                                           |
+| taskTypeText          | String                     | 任务类型                   | 光子/主图                                                                                                                                 |
+| isDelete              | Byte                       | 是否删除                   | 0：已删除，1：未删除                                                                                                                      |
 
 **请求示例**
 
@@ -1404,10 +1399,10 @@ task_info = api.query.task_info(task_ids_list=[14400249])
 
 **请求参数**：
 
-| **参数** | **类型** | 是否必须 | **说明** | **备注**                 |
-| -------- | -------- | -------- | -------- | ------------------------ |
-| new_name | String   | N        | 标签名   | 名称唯一性               |
-| status   | Integer  | N        | 标签状态 | 0:开启，1：关闭，默认为1 |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**           |
+| -------------- | -------------- | -------- | -------------- | ------------------------ |
+| new_name       | String         | N        | 标签名         | 名称唯一性               |
+| status         | Integer        | N        | 标签状态       | 0:开启，1：关闭，默认为1 |
 
 **返回参数**：缺省
 
@@ -1437,8 +1432,8 @@ task_info = api.tag.add_label(new_name="test_tag4", status=0)
 **请求参数**：
 
 | **参数** | **类型** | **说明** | **备注** |
-| -------- | -------- | -------- | -------- |
-| del_name | String   | label名  |          |
+| -------------- | -------------- | -------------- | -------------- |
+| del_name       | String         | label名        |                |
 
 **返回参数**：缺省
 
@@ -1469,11 +1464,11 @@ delete_label_name = api.tag.delete_label(del_name="test_tag2")
 
 **返回参数**：
 
-| **参数**           | **类型**       | **说明** | **备注** |
-|--------------------|----------------|----------|----------|
-| projectNameList    | List\<Object\> | 项目list |          |
-| Object.projectName | String         | 项目名   |          |
-| Object.projectId   | Integer        | 项目id   |          |
+| **参数**     | **类型** | **说明** | **备注** |
+| ------------------ | -------------- | -------------- | -------------- |
+| projectNameList    | List\<Object\> | 项目list       |                |
+| Object.projectName | String         | 项目名         |                |
+| Object.projectId   | Integer        | 项目id         |                |
 
 **请求示例**：缺省
 
@@ -1507,17 +1502,17 @@ label_list = api.tag.get_label_list()
 
 **请求参数**：
 
-| 参数 | 类型 | 是否必须 | 说明                                                         | 备注     |
-| ---- | ---- | -------- | ------------------------------------------------------------ | -------- |
-| flag | int  | 否       | 0:查询本账号下的项目;<br>1:查询本账号下以及主账号下的项目;<br>2:查询相关联所有项目(同一主账号下的所有项目); | 默认为 0 |
+| 参数 | 类型 | 是否必须 | 说明                                                                                                                | 备注     |
+| ---- | ---- | -------- | ------------------------------------------------------------------------------------------------------------------- | -------- |
+| flag | int  | 否       | 0:查询本账号下的项目;`<br>`1:查询本账号下以及主账号下的项目;`<br>`2:查询相关联所有项目(同一主账号下的所有项目); | 默认为 0 |
 
 **返回参数**：
 
-| **参数**           | **类型**       | **说明** | **备注** |
-| ------------------ | -------------- | -------- | -------- |
-| projectNameList    | List\<Object\> | 项目list |          |
-| Object.projectName | String         | 项目名   |          |
-| Object.projectId   | Integer        | 项目id   |          |
+| **参数**     | **类型** | **说明** | **备注** |
+| ------------------ | -------------- | -------------- | -------------- |
+| projectNameList    | List\<Object\> | 项目list       |                |
+| Object.projectName | String         | 项目名         |                |
+| Object.projectId   | Integer        | 项目id         |                |
 
 **请求示例**：缺省
 
@@ -1552,10 +1547,10 @@ new_projects = api.tag.get_list(flag=0)
 
 **请求参数**：
 
-| **参数** | **类型**       | 是否必须 | **说明**     | **备注** |
-| -------- | -------------- | -------- | ------------ | -------- |
-| tag      | string         | Y        | 任务标签     |          |
-| task_ids | List\<integer> | Y        | 任务ID列表集 |          |
+| **参数** | **类型** | 是否必须 | **说明** | **备注** |
+| -------------- | -------------- | -------- | -------------- | -------------- |
+| tag            | string         | Y        | 任务标签       |                |
+| task_ids       | List\<integer> | Y        | 任务ID列表集   |                |
 
 **返回参数**：缺省
 
@@ -1584,9 +1579,9 @@ tag = api.tag.add_task_tag(tag="test_tag", task_ids=[29445045, 29435295])
 
 **请求参数**：
 
-| **参数** | **类型**       | 是否必须 | **说明**       | **备注** |
-| -------- | -------------- | -------- | -------------- |------|
-| tag_ids  | List\<integer> | Y        | 删除任务标签ID | test |
+| **参数** | **类型** | 是否必须 | **说明** | **备注** |
+| -------------- | -------------- | -------- | -------------- | -------------- |
+| tag_ids        | List\<integer> | Y        | 删除任务标签ID | test           |
 
 **返回参数**：缺省
 
@@ -1617,23 +1612,23 @@ del_tag = api.tag.delete_task_tag(tag_ids=[21205])
 
 **返回参数**：
 
-| **参数**       | **类型**         | **说明**           | **备注** |
-|----------------|------------------|--------------------|----------|
-| isAutoCommit   | Integer          | 是否自动提交       |          |
-| renderInfoList | List\<Software\> | 渲染器版本信息集合 |          |
-| defaultCgId    | Integer          | 默认渲染器ID       |          |
+| **参数** | **类型**   | **说明**     | **备注** |
+| -------------- | ---------------- | ------------------ | -------------- |
+| isAutoCommit   | Integer          | 是否自动提交       |                |
+| renderInfoList | List\<Software\> | 渲染器版本信息集合 |                |
+| defaultCgId    | Integer          | 默认渲染器ID       |                |
 
 **Software**
 
-| **参数**          | **类型** | **说明**         | **备注** |
-|-------------------|----------|------------------|----------|
-| cgId              | Integer  | 渲染软件ID       |          |
-| cgName            | String   | 渲染软件名       |          |
-| cgType            | String   | 渲染文件后缀支持 |          |
-| iconPath          | String   | 渲染软件图标地址 |          |
-| isNeedProjectPath | Integer  |                  |          |
-| isNeedAnalyse     | Integer  | 是否需要分析     |          |
-| isSupportLinux    | Integer  | 是否支持linux    |          |
+| **参数**    | **类型** | **说明**   | **备注** |
+| ----------------- | -------------- | ---------------- | -------------- |
+| cgId              | Integer        | 渲染软件ID       |                |
+| cgName            | String         | 渲染软件名       |                |
+| cgType            | String         | 渲染文件后缀支持 |                |
+| iconPath          | String         | 渲染软件图标地址 |                |
+| isNeedProjectPath | Integer        |                  |                |
+| isNeedAnalyse     | Integer        | 是否需要分析     |                |
+| isSupportLinux    | Integer        | 是否支持linux    |                |
 
 **请求示例**：
 
@@ -1729,41 +1724,41 @@ support_software = api.query.supported_software()
 
 **请求参数**：
 
-| **参数** | **类型** | 是否必须 | **说明**   | **备注**              |
-| -------- | -------- | -------- | ---------- | --------------------- |
-| name     | String   | Y        | 渲染软件名 | 参考[DCC软件的ID映射] |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**        |
+| -------------- | -------------- | -------- | -------------- | --------------------- |
+| name           | String         | Y        | 渲染软件名     | 参考[DCC软件的ID映射] |
 
 **返回参数**：
 
-| **参数**  | **类型**                | **说明**         | **备注** |
-|-----------|-------------------------|------------------|----------|
-| cgPlugin  | List\<Plugin\>          | 支持插件集合     |          |
-| cgVersion | List\<**SoftVersion**\> | 支持软件版本集合 |          |
+| **参数** | **类型**                | **说明**   | **备注** |
+| -------------- | ----------------------------- | ---------------- | -------------- |
+| cgPlugin       | List\<Plugin\>                | 支持插件集合     |                |
+| cgVersion      | List\<**SoftVersion**\> | 支持软件版本集合 |                |
 
 **Plugin**：
 
-| **参数**       | **类型**                  | **说明**                           | **备注** |
-|----------------|---------------------------|------------------------------------|----------|
-| cvId           | Integer                   | 渲染软件版本ID(**SoftVersion.id**) |          |
-| pluginName     | String                    |  插件名                            |          |
-| pluginVersions | List\<**PluginVersion**\> | 插件版本集合                       |          |
+| **参数** | **类型**                  | **说明**                           | **备注** |
+| -------------- | ------------------------------- | ---------------------------------------- | -------------- |
+| cvId           | Integer                         | 渲染软件版本ID(**SoftVersion.id**) |                |
+| pluginName     | String                          | 插件名                                   |                |
+| pluginVersions | List\<**PluginVersion**\> | 插件版本集合                             |                |
 
 **PluginVersion**：
 
-| **参数**      | **类型** | **说明**    | **备注** |
-|---------------|----------|-------------|----------|
-| pluginId      | Integer  | 插件版本ID  |          |
-| pluginName    | String   |  插件名     |          |
-| pluginVersion |  String  |  插件版本   |          |
+| **参数** | **类型** | **说明** | **备注** |
+| -------------- | -------------- | -------------- | -------------- |
+| pluginId       | Integer        | 插件版本ID     |                |
+| pluginName     | String         | 插件名         |                |
+| pluginVersion  | String         | 插件版本       |                |
 
 **SoftVersion**：
 
-| **参数**  | **类型** | **说明**        | **备注** |
-|-----------|----------|-----------------|----------|
-| id        | Integer  | 渲染软件版本ID  |          |
-| cgId      | Integer  |  渲染软件ID     |          |
-| cgName    | String   | 渲染软件名      |          |
-| cgVersion | String   | 渲染软件版本    |          |
+| **参数** | **类型** | **说明** | **备注** |
+| -------------- | -------------- | -------------- | -------------- |
+| id             | Integer        | 渲染软件版本ID |                |
+| cgId           | Integer        | 渲染软件ID     |                |
+| cgName         | String         | 渲染软件名     |                |
+| cgVersion      | String         | 渲染软件版本   |                |
 
 **请求示例**：
 
@@ -1810,22 +1805,22 @@ support_software_plugin = api.query.supported_plugin(name='maya')
 
 **render_env**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**                   | **备注**                   |
-| --------------- | --------------- | -------- | -------------------------- | -------------------------- |
+| **参数**  | **类型**  | 是否必须 | **说明**             | **备注**                   |
+| --------------- | --------------- | -------- | -------------------------- | -------------------------------- |
 | cgId            | Integer         | Y        | 渲染软件ID                 | **SoftVersion.cgId**       |
 | cgName          | String          | Y        | 渲染软件名称               | **SoftVersion.cgName**     |
 | cgVersion       | String          | Y        | 渲染软件版本               | **SoftVersion.cgVersion**  |
-| renderLayerType | Integer         | N        | maya渲染类型               |                            |
-| editName        | String          | Y        | 用户设置的渲染环境自定义名 |                            |
-| renderSystem    | String          | Y        | 渲染系统                   | 0 linux, 1 windows         |
+| renderLayerType | Integer         | N        | maya渲染类型               |                                  |
+| editName        | String          | Y        | 用户设置的渲染环境自定义名 |                                  |
+| renderSystem    | String          | Y        | 渲染系统                   | 0 linux, 1 windows               |
 | pluginIds       | List\<Integer\> | Y        | 渲染插件集合               | **PluginVersion.pluginId** |
-| projectPath     | String          | N        | 工程路径                   |                            |
+| projectPath     | String          | N        | 工程路径                   |                                  |
 
 **返回参数**：
 
-| **参数** | **类型** | **说明**                   | **备注** |
-| -------- | -------- | -------------------------- | -------- |
-| editName | String   | 用户设置的渲染环境自定义名 |          |
+| **参数** | **类型** | **说明**             | **备注** |
+| -------------- | -------------- | -------------------------- | -------------- |
+| editName       | String         | 用户设置的渲染环境自定义名 |                |
 
 **请求示例**：
 
@@ -1869,15 +1864,15 @@ add_user_env = api.env.add_render_env(render_env=env)
 
 **render_env**：
 
-| **参数**        | **类型**        | 是否必须 | **说明**         | **备注**                         |
+| **参数**  | **类型**  | 是否必须 | **说明**   | **备注**                   |
 | --------------- | --------------- | -------- | ---------------- | -------------------------------- |
-| cgId            | Integer         | Y        | 渲染软件ID       | **SoftVersion.cgId**             |
-| cgName          | String          | Y        | 渲染软件名称     | **SoftVersion.cgName**           |
-| cgVersion       | String          | Y        | 渲染软件版本     | **SoftVersion.cgVersion**        |
+| cgId            | Integer         | Y        | 渲染软件ID       | **SoftVersion.cgId**       |
+| cgName          | String          | Y        | 渲染软件名称     | **SoftVersion.cgName**     |
+| cgVersion       | String          | Y        | 渲染软件版本     | **SoftVersion.cgVersion**  |
 | renderLayerType | Integer         | N        | maya渲染类型     |                                  |
 | editName        | String          | Y        | 渲染环境自定义名 | 修改是必须传递已经存在的配置名称 |
 | renderSystem    | Integer         | Y        | 渲染系统         | 0 linux, 1 windows               |
-| pluginIds       | List\<Integer\> | Y        | 渲染插件集合     | **PluginVersion.pluginId**       |
+| pluginIds       | List\<Integer\> | Y        | 渲染插件集合     | **PluginVersion.pluginId** |
 | projectPath     | String          | N        | 工程路径         |                                  |
 
 **返回参数**：缺省
@@ -1916,9 +1911,9 @@ update_user_env = api.env.update_render_env(render_env=update_env)
 
 **请求参数**：
 
-| **参数**  | **类型** | 是否必须 | **说明**         | **备注** |
-| --------- | -------- | -------- | ---------------- | -------- |
-| edit_name | String   | Y        | 渲染环境自定义名 |          |
+| **参数** | **类型** | 是否必须 | **说明**   | **备注** |
+| -------------- | -------------- | -------- | ---------------- | -------------- |
+| edit_name      | String         | Y        | 渲染环境自定义名 |                |
 
 **返回参数**：缺省
 
@@ -1947,9 +1942,9 @@ delete_user_env = api.env.delete_render_env(edit_name="testRenderEnv")
 
 **请求参数**：
 
-| **参数**  | **类型** | 是否必须 | **说明**         | **备注** |
-| --------- | -------- | -------- | ---------------- | -------- |
-| edit_name | String   | Y        | 渲染环境自定义名 |          |
+| **参数** | **类型** | 是否必须 | **说明**   | **备注** |
+| -------------- | -------------- | -------- | ---------------- | -------------- |
+| edit_name      | String         | Y        | 渲染环境自定义名 |                |
 
 **返回参数**：
 
@@ -1972,29 +1967,29 @@ set_default_user_env = api.env.set_default_render_env(edit_name="testRenderEnv")
 }
 ```
 
-##  获取用户插件配置
+## 获取用户插件配置
 
 **接口路径**： /api/render/plugin/getUserPluginConfig
 
 **请求参数**：
 
-| **参数** | **类型**      | 是否必须 | **说明**       | **备注**                 |
-| -------- | ------------- | -------- | -------------- | ------------------------ |
-| name     | String        | N        | 渲染软件名     | cg_names和name必填其一   |
-| cg_names | List\<string> | N        | 渲染软件名列表 | cg_names和name必填其一   |
-| os_name  | Integer       | N        | 选择操作系统   | 0:Linux，1:windows,默认1 |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**           |
+| -------------- | -------------- | -------- | -------------- | ------------------------ |
+| name           | String         | N        | 渲染软件名     | cg_names和name必填其一   |
+| cg_names       | List\<string>  | N        | 渲染软件名列表 | cg_names和name必填其一   |
+| os_name        | Integer        | N        | 选择操作系统   | 0:Linux，1:windows,默认1 |
 
 **返回参数**：List\<RenderEnv>
 
-| **参数**              | **类型**                  | **说明**         | **备注**                  |
-|-----------------------|---------------------------|------------------|---------------------------|
-| cgId                  | Integer                   | 渲染软件ID       |                           |
-| editName              | String                    | 渲染环境自定义名 |                           |
-| cgName                | String                    | 渲染软件名       |                           |
-| cgVersion             | String                    | 渲染软件版本     |                           |
-| osName                | Integer                   | 渲染环境系统     | 0Linux，1windows          |
-| renderLayerType       | Integer                   |                  |                           |
-| isDefault             | Integer                   | 是否是默认配置   | 0不是默认配置 1是默认配置 |
+| **参数**        | **类型**                  | **说明**   | **备注**            |
+| --------------------- | ------------------------------- | ---------------- | ------------------------- |
+| cgId                  | Integer                         | 渲染软件ID       |                           |
+| editName              | String                          | 渲染环境自定义名 |                           |
+| cgName                | String                          | 渲染软件名       |                           |
+| cgVersion             | String                          | 渲染软件版本     |                           |
+| osName                | Integer                         | 渲染环境系统     | 0Linux，1windows          |
+| renderLayerType       | Integer                         |                  |                           |
+| isDefault             | Integer                         | 是否是默认配置   | 0不是默认配置 1是默认配置 |
 | respUserPluginInfoVos | List\<**PluginVersion**\> | 渲染环境插件集合 |                           |
 
 **请求示例**：
@@ -2078,17 +2073,17 @@ user_render_config = api.env.get_render_env(name='houdini')
 
 **请求参数**：
 
-| **参数**   | **类型** | 是否必须 | **说明** | **备注**                                                     |
-| ---------- | -------- | -------- | -------- | ------------------------------------------------------------ |
-| task_id    | Integer  | Y        | 任务号   |                                                              |
-| frame_type | Integer  | N        | 渲染类型 | 帧类型 2:光子帧; 5:主图; 不传 标识自动识别，默认加载正在渲染中的图列表，如正在渲染主图，则加载图列表为主图，正在渲染光子，加载图为光子 |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**                                                                                                                         |
+| -------------- | -------------- | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| task_id        | Integer        | Y        | 任务号         |                                                                                                                                        |
+| frame_type     | Integer        | N        | 渲染类型       | 帧类型 2:光子帧; 5:主图; 不传 标识自动识别，默认加载正在渲染中的图列表，如正在渲染主图，则加载图列表为主图，正在渲染光子，加载图为光子 |
 
 **返回参数**：
 
-| **参数**        | **类型**               | **说明**           | **备注**                                |
-|-----------------|------------------------|--------------------|-----------------------------------------|
-|  width          | Integer                | 图片分辨率高度     |                                         |
-| height          | Integer                | 图片分辨率宽度     |                                         |
+| **参数**  | **类型**         | **说明**     | **备注**                          |
+| --------------- | ---------------------- | ------------------ | --------------------------------------- |
+| width           | Integer                | 图片分辨率高度     |                                         |
+| height          | Integer                | 图片分辨率宽度     |                                         |
 | block           | Integer                | 分块数             |                                         |
 | isRenderPhoton  | Boolean                | 是否渲染光子       | true表示任务渲染了光子                  |
 | currentTaskType | String                 | 当前任务的渲染状态 | Render: 渲染主图 RenderPhoton: 渲染光子 |
@@ -2099,21 +2094,21 @@ user_render_config = api.env.get_render_env(name='houdini')
 
 **分块帧详情**：grabInfo
 
-| **参数**     | **类型** | **说明**             | **备注** |
-| ------------ | -------- | -------------------- | -------- |
-| startTime    | String   | 开始时间             |          |
-| endTime      | String   | 结束时间             |          |
-| frameStatus  | String   | 帧状态               |          |
-| isMaxPrice   | String   | 是否封顶价           |          |
-| feeAmount    | String   | 余额扣费             |          |
-| couponFee    | String   | 优惠券扣费           |          |
-| frameIndex   | String   | 帧数                 |          |
-| frameBlock   | String   | 帧块数               |          |
-| framePercent | String   | 帧渲染百分比         |          |
-| frameUsed    | String   | 帧渲染已消耗时间     |          |
-| frameEst     | String   | 帧渲染预计剩余时间   |          |
-| renderInfo   | String   | 帧渲染进度信息       |          |
-| grabUrl      | String   | 帧渲染进度图连接地址 |          |
+| **参数** | **类型** | **说明**       | **备注** |
+| -------------- | -------------- | -------------------- | -------------- |
+| startTime      | String         | 开始时间             |                |
+| endTime        | String         | 结束时间             |                |
+| frameStatus    | String         | 帧状态               |                |
+| isMaxPrice     | String         | 是否封顶价           |                |
+| feeAmount      | String         | 余额扣费             |                |
+| couponFee      | String         | 优惠券扣费           |                |
+| frameIndex     | String         | 帧数                 |                |
+| frameBlock     | String         | 帧块数               |                |
+| framePercent   | String         | 帧渲染百分比         |                |
+| frameUsed      | String         | 帧渲染已消耗时间     |                |
+| frameEst       | String         | 帧渲染预计剩余时间   |                |
+| renderInfo     | String         | 帧渲染进度信息       |                |
+| grabUrl        | String         | 帧渲染进度图连接地址 |                |
 
 **请求示例**：
 
@@ -2169,10 +2164,10 @@ task_processing_img = api.query.get_task_processing_img(task_id=14470635, frame_
 
 **请求参数**：
 
-| **参数**     | **类型**        | **是否必须（Y/N）** | **说明**             |
-| ------------ | --------------- | ------------------- | -------------------- |
-| task_id_list | List\<Integer\> | Y                   | 任务号               |
-| overtime     | Long            | Y                   | 超时停止时间，单位秒 |
+| **参数** | **类型**  | **是否必须（Y/N）** | **说明**       |
+| -------------- | --------------- | ------------------------- | -------------------- |
+| task_id_list   | List\<Integer\> | Y                         | 任务号               |
+| overtime       | Long            | Y                         | 超时停止时间，单位秒 |
 
 **请求参数示例**：
 
@@ -2200,10 +2195,10 @@ set_task_overtime = api.task.set_task_overtime_top(task_id_list=[14684405], over
 
 **请求参数**：
 
-| **参数**     | **类型** | 是否必须 | **说明** | 备注                               |
-| ------------ | -------- | -------- | -------- | ---------------------------------- |
-| frame_id     | Integer  | Y        | 帧id号   | 可通过<获取任务渲染帧详情接口>获取 |
-| frame_status | Integer  | N        | 帧状态   | 默认为4（完成），只有完成有缩略图  |
+| **参数** | **类型** | 是否必须 | **说明** | 备注                               |
+| -------------- | -------------- | -------- | -------------- | ---------------------------------- |
+| frame_id       | Integer        | Y        | 帧id号         | 可通过<获取任务渲染帧详情接口>获取 |
+| frame_status   | Integer        | N        | 帧状态         | 默认为4（完成），只有完成有缩略图  |
 
 **请求示例**：
 
@@ -2316,9 +2311,9 @@ raysync_user_key = api.query.get_raysync_user_key()
 
 **请求参数**：
 
-| **参数**     | **类型**        | 是否必须 | **说明** |
-| ------------ | --------------- | -------- | -------- |
-| task_id_list | List\<Integer\> | Y        | 作业id   |
+| **参数** | **类型**  | 是否必须 | **说明** |
+| -------------- | --------------- | -------- | -------------- |
+| task_id_list   | List\<Integer\> | Y        | 作业id         |
 
 **请求示例**：
 
@@ -2340,7 +2335,7 @@ full_speed_render = api.task.full_speed(task_id_list=[13652193])
 }
 ```
 
-##  获取传输配置 
+## 获取传输配置
 
 **接口地址**：  /api/render/transfer/getConfig
 
@@ -2348,34 +2343,34 @@ full_speed_render = api.task.full_speed(task_id_list=[13652193])
 
 **返回参数**：
 
-| **参数**            | **类型** | **说明**                    | **备注** |
-| ------------------- | -------- | --------------------------- | -------- |
-| inputBid            | String   | Input传输bid                |          |
-| outputBid           | String   | output传输bid               |          |
-| configBid           | String   | config bid                  |          |
-| parentInputBid      | String   | 对应主账号Input传输bid      |          |
-| resqEngines         | Object[] | 引擎配置                    |          |
-| engineName          | String   | 引擎名                      |          |
-| checkServer         | String   | 校验服务器                  |          |
-| checkPort           | String   | 校验端口                    |          |
-| checkEnable         | String   | 检查是否可用                |          |
-| checkExcludType     | String   | 检测例外 文件类型 ,隔开     |          |
-| automaticCheck      | number   | 自动检测并切换线路 1是 0:否 |          |
-| isDefault           | number   | 默认 1是 0否                |          |
-| resqEngineAccounts  | Object[] | aspera账户                  |          |
-| bid                 | String   | aspera对应input bid         |          |
-| name                | String   | aspera用户名                |          |
-| password            | String   | aspera密码                  |          |
-| respTaskEngineLines | Object[] | 引擎列表                    |          |
-| name                | String   | 线路名                      |          |
-| server              | String   | 线路IP                      |          |
-| port                | String   | 端口                        |          |
-| isDefault           | Number   | 是否默认 1默认              |          |
-| lineId              | Number   | 线路表ID                    |          |
-| type                | Number   | 线路类型 1.专线 0.通用线路  |          |
-| subUserOutputBids   | Object[] | 子账号outputbid集合         |          |
-| userId              | String   | 子账号ID                    |          |
-| outputBid           | String   | outputBid                   |          |
+| **参数**      | **类型** | **说明**              | **备注** |
+| ------------------- | -------------- | --------------------------- | -------------- |
+| inputBid            | String         | Input传输bid                |                |
+| outputBid           | String         | output传输bid               |                |
+| configBid           | String         | config bid                  |                |
+| parentInputBid      | String         | 对应主账号Input传输bid      |                |
+| resqEngines         | Object[]       | 引擎配置                    |                |
+| engineName          | String         | 引擎名                      |                |
+| checkServer         | String         | 校验服务器                  |                |
+| checkPort           | String         | 校验端口                    |                |
+| checkEnable         | String         | 检查是否可用                |                |
+| checkExcludType     | String         | 检测例外 文件类型 ,隔开     |                |
+| automaticCheck      | number         | 自动检测并切换线路 1是 0:否 |                |
+| isDefault           | number         | 默认 1是 0否                |                |
+| resqEngineAccounts  | Object[]       | aspera账户                  |                |
+| bid                 | String         | aspera对应input bid         |                |
+| name                | String         | aspera用户名                |                |
+| password            | String         | aspera密码                  |                |
+| respTaskEngineLines | Object[]       | 引擎列表                    |                |
+| name                | String         | 线路名                      |                |
+| server              | String         | 线路IP                      |                |
+| port                | String         | 端口                        |                |
+| isDefault           | Number         | 是否默认 1默认              |                |
+| lineId              | Number         | 线路表ID                    |                |
+| type                | Number         | 线路类型 1.专线 0.通用线路  |                |
+| subUserOutputBids   | Object[]       | 子账号outputbid集合         |                |
+| userId              | String         | 子账号ID                    |                |
+| outputBid           | String         | outputBid                   |                |
 
 **请求示例**：
 
@@ -2480,17 +2475,17 @@ transfer_config = api.transmit.get_transfer_config()
 }
 ```
 
-##  上传任务配置文件 
+## 上传任务配置文件
 
-**接口路径**：  /api/render/submit/taskJsonFile 
+**接口路径**：  /api/render/submit/taskJsonFile
 
 **请求参数**：
 
-| **参数**  | **类型** | 是否必须 | **说明** | **备注**        |
-| --------- | -------- | -------- | -------- | --------------- |
-| task_id   | Integer  | Y        | 任务号   |                 |
-| content   | String   | Y        | 文件内容 |                 |
-| file_name | String   | N        | 文件名   | 默认“task.json” |
+| **参数** | **类型** | 是否必须 | **说明** | **备注**    |
+| -------------- | -------------- | -------- | -------------- | ----------------- |
+| task_id        | Integer        | Y        | 任务号         |                   |
+| content        | String         | Y        | 文件内容       |                   |
+| file_name      | String         | N        | 文件名         | 默认“task.json” |
 
 **返回参数**：缺省
 
@@ -2514,31 +2509,29 @@ start_task = api.task.start_task(task_param_list=[13798105])
 }
 ```
 
-##  获取用户存储文件结构 
+## 获取用户存储文件结构
 
-[^2021/1/18]: Add New Interface
-
-**接口路径**：  /api/render/file/operate/getOutputUserDirFile 
+**接口路径**：  /api/render/file/operate/getOutputUserDirFile
 
 **请求参数**：
 
-| **参数**  | **类型** | 是否必须 | **说明**                                               | **备注**  |
-| --------- | -------- | -------- | ------------------------------------------------------ | --------- |
-| task_id   | Integer  | N        | 任务号,如果是分层任务则是指的子任务号,即每一层的任务号 |           |
-| tree_path | String   | N        | 相对用户存储(output)根的路径                           | 默认为“/” |
+| **参数** | **类型** | 是否必须 | **说明**                                         | **备注** |
+| -------------- | -------------- | -------- | ------------------------------------------------------ | -------------- |
+| task_id        | Integer        | N        | 任务号,如果是分层任务则是指的子任务号,即每一层的任务号 |                |
+| tree_path      | String         | N        | 相对用户存储(output)根的路径                           | 默认为“/”    |
 
 **返回参数[data]**：
 
-| 参数       | 类型   | 说明                                            |
-| ---------- | ------ | ----------------------------------------------- |
-| fileName   | string | 当前文件名或文件夹名                            |
+| 参数       | 类型   | 说明                                              |
+| ---------- | ------ | ------------------------------------------------- |
+| fileName   | string | 当前文件名或文件夹名                              |
 | fileSize   | int    | 文件大小，如果是文件夹则为“null”                |
-| iconPath   | string | 图表路径(可忽略此参数)                          |
-| lastModify | string | 文件或文件夹更新日期                            |
-| fileType   | string | 文件后缀，如果是文件夹则为"null"                |
-| filePath   | string | 文件或文件夹相对用户存储output根的相对路径      |
+| iconPath   | string | 图表路径(可忽略此参数)                            |
+| lastModify | string | 文件或文件夹更新日期                              |
+| fileType   | string | 文件后缀，如果是文件夹则为"null"                  |
+| filePath   | string | 文件或文件夹相对用户存储output根的相对路径        |
 | directory  | bool   | 是否为文件夹, "true":是文件夹，“false”:非文件夹 |
-| isArrears  | int    | 是否欠费, 0：未欠费，1：欠费                    |
+| isArrears  | int    | 是否欠费, 0：未欠费，1：欠费                      |
 
 **请求示例**：
 
@@ -2563,19 +2556,15 @@ paths = api.transmit.get_output_files(task_id=1484861)
 ]
 ```
 
-##  获取任务的所有子任务号 
-
-[^2021/1/18]: Add New Interface
+## 获取任务的所有子任务号
 
 **接口路径**：
 
 **请求参数**：
 
-| **参数** | **类型**          | 是否必须 | **说明**                                                   |
-| -------- | ----------------- | -------- | ---------------------------------------------------------- |
-| task_id  | Integer or string | Y        | 获取主帐户下的所有子帐户，如果没有子帐户，则返回当前账号ID |
-
-
+| **参数** | **类型**    | 是否必须 | **说明**                                             |
+| -------------- | ----------------- | -------- | ---------------------------------------------------------- |
+| task_id        | Integer or string | Y        | 获取主帐户下的所有子帐户，如果没有子帐户，则返回当前账号ID |
 
 **请求示例**：
 
@@ -2589,31 +2578,29 @@ ids = api.query.get_small_task_id(task_id=1521323)
 [1521325, 1521327, 1521329]
 ```
 
-##  获取平台硬件配置信息 
-
-[^2021/4/12]: add new interface in rayvision_api 2.8.0 
+## 获取平台硬件配置信息
 
 **接口路径**：/api/render/hardwareConfig/list
 
 **请求参数**：
 
-| **参数** | **类型**  | 是否必须 | **说明**                           |
-| -------- | --------- | -------- | ---------------------------------- |
-| task_ids | List[str] | N        | 任务号集合，查询指定任务的配置参数 |
+| **参数** | **类型** | 是否必须 | **说明**                     |
+| -------------- | -------------- | -------- | ---------------------------------- |
+| task_ids       | List[str]      | N        | 任务号集合，查询指定任务的配置参数 |
 
 **返回参数[data]**：
 
-| 参数           | 类型      | 说明                                                         |
-| -------------- | --------- | ------------------------------------------------------------ |
-| id             | int       | 硬件配置id（hardwareConfigId）                               |
-| type           | int       | 1:CPU;<br>2: GPU                                             |
-| model          | string    | 硬件型号, 默认"Default"                                      |
-| ram            | String    | 内存                                                         |
-| gpuNum         | String    | GPU卡数，CPU平台为"null"                                     |
-| platform       | int       | 平台号                                                       |
-| current        | bool      | false/ true，当传任务号时，查询的是任务当前的硬件配置        |
+| 参数           | 类型      | 说明                                                                    |
+| -------------- | --------- | ----------------------------------------------------------------------- |
+| id             | int       | 硬件配置id（hardwareConfigId）                                          |
+| type           | int       | 1:CPU;`<br>`2: GPU                                                    |
+| model          | string    | 硬件型号, 默认"Default"                                                 |
+| ram            | String    | 内存                                                                    |
+| gpuNum         | String    | GPU卡数，CPU平台为"null"                                                |
+| platform       | int       | 平台号                                                                  |
+| current        | bool      | false/ true，当传任务号时，查询的是任务当前的硬件配置                   |
 | notSupportCgId | list[int] | 不支持的cgId,（cgid对应软件可以查询“常用参数设置”-->"DCC软件ID映射"） |
-| status         | int       | 状态<br>1: 启用;<br>0: 禁用                                  |
+| status         | int       | 状态`<br>`1: 启用;`<br>`0: 禁用                                     |
 
 **请求示例**：
 
@@ -2688,3 +2675,12 @@ hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 ]
 ```
 
+[^api]: Add in v2.4.0
+    
+[]:  in v2.4.0
+    
+[^2021/1/18]: Add New Interface
+    
+[]:  New Interface
+    
+[^2021/4/12]: add new interface in rayvision_api 2.8.0

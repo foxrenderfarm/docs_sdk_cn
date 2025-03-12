@@ -3,7 +3,7 @@
 
 演示demo
 -------------
-学习的最好方法就是参考例子，`rayvision_log <https://pip.renderbus.com/simple/rayvision-log/>`_ 也不例外，我们也提供了下面的一个使用 **demo** 样例供您参考::
+学习的最好方法就是参考例子，`rayvision_log <https://pip.Foxrenderfarm.com/simple/rayvision-log/>`_ 也不例外，我们也提供了下面的一个使用 **demo** 样例供您参考::
 
     import logging
     from rayvision_log import init_logger

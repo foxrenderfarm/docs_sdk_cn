@@ -4,10 +4,10 @@
 
 .. _header-n3:
 
-1. RenderBus SDK支持那些Python版本呢？
+1. Foxrenderfarm SDK支持那些Python版本呢？
 --------------------------------------
 
-RenderBus SDK 目前支持Python2.7.10+ 和Python 3.6, 3.7
+Foxrenderfarm SDK 目前支持Python2.7.10+ 和Python 3.6, 3.7
 
 .. _header-n5:
 
