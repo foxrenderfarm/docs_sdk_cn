@@ -65,10 +65,10 @@
 准备工作
 --------
 
-1. 您需要一个 `Foxrenderfarm <https://task.Foxrenderfarm.com>`__ 账号
+1. 您需要一个 `Foxrenderfarm <https://task.foxrenderfarm.com>`__ 账号
 
 2. 您还需要在 `Foxrenderfarm
-   开发者中心 <https://task.Foxrenderfarm.com/user/developer>`__
+   开发者中心 <https://task.foxrenderfarm.com/user/developer>`__
    申请使用渲染SDK，并获取AccessID和AccessKey
 
 .. _header-n26:

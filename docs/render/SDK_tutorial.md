@@ -4,7 +4,7 @@
 
 ```
 render_para = {
-    "domain": "task.Foxrenderfarm.com",
+    "domain": "task.foxrenderfarm.com",
     "platform": "62",
     "access_id": "xxxx",
     "access_key": "xxxx",

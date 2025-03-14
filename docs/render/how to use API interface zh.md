@@ -6,7 +6,7 @@
 
 ```python
 user_info = {
-    "domain_name": "task.Foxrenderfarm.com",
+    "domain_name": "task.foxrenderfarm.com",
     "platform": "2",
     "access_id": "xxxxxxxxxxxxxxxxxxxxxx",
     "access_key": "xxxxxxxxxxxxxxxxxxxxx",
@@ -2600,7 +2600,7 @@ ids = api.query.get_small_task_id(task_id=1521323)
 | platform       | int       | 平台号                                                                  |
 | current        | bool      | false/ true，当传任务号时，查询的是任务当前的硬件配置                   |
 | notSupportCgId | list[int] | 不支持的cgId,（cgid对应软件可以查询“常用参数设置”-->"DCC软件ID映射"） |
-| status         | int       | 状态`<br>`1: 启用;`<br>`0: 禁用                                     |
+| status         | int       | 状态 `<br>`1: 启用;`<br>`0: 禁用                                    |
 
 **请求示例**：
 
@@ -2675,12 +2675,12 @@ hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 ]
 ```
 
+[]:  in v2.4.0
+
+[]:  New Interface
+
 [^api]: Add in v2.4.0
     
-[]:  in v2.4.0
-    
 [^2021/1/18]: Add New Interface
-    
-[]:  New Interface
     
 [^2021/4/12]: add new interface in rayvision_api 2.8.0

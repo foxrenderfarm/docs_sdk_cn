@@ -88,7 +88,7 @@ api = RayvisionAPI(access_id="xxxxx",
                    access_key="xxxxx",
                    domain="task.renderbus.com",
                    platform="2")
-                 
+               
 UPLOAD = RayvisionUpload(api)
 UPLOAD.upload_asset(r"D:\test\test_upload\1586250829\upload.json")
 ```
