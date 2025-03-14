@@ -1,10 +1,10 @@
-为FoxrenderfarmSDK做贡献
+为FoxRenderFarmSDK做贡献
 =====================
 
 .. important::
-    请仔细检查，您正在https://Foxrenderfarm.readthedocs.io/zh/latest/index.html 上阅读本文档的最新版本。
+    请仔细检查，您正在https://foxrenderfarm.readthedocs.io/zh/latest/index.html 上阅读本文档的最新版本。
 
-有许多方法可以为FoxrenderfarmSDK做出贡献。这里是其中的一些：
+有许多方法可以为FoxRenderFarmSDK做出贡献。这里是其中的一些：
 
     - 在问题跟踪器中报告错误和请求功能，尝试遵循下面的报告错误中详细介绍的准则。
 
