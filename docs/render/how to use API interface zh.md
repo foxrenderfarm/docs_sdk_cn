@@ -2568,7 +2568,7 @@ paths = api.transmit.get_output_files(task_id=1484861)
 
 **请求示例**：
 
-```json
+```Python
 ids = api.query.get_small_task_id(task_id=1521323)
 ```
 
@@ -2604,7 +2604,7 @@ ids = api.query.get_small_task_id(task_id=1521323)
 
 **请求示例**：
 
-```json
+```Python
 hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 ```
 
@@ -2675,12 +2675,38 @@ hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 ]
 ```
 
-[]:  in v2.4.0
+##  获取包机信息
 
-[]:  New Interface
+**接口路径**：/api/render/submit/getUserPackNodeInfo
 
-[^api]: Add in v2.4.0
-    
-[^2021/1/18]: Add New Interface
-    
-[^2021/4/12]: add new interface in rayvision_api 2.8.0
+**请求参数**：缺省
+
+**请求示例**：
+
+```Python
+pack_node_info = api.query.get_pack_node_info()
+```
+
+**返回参数[data]**：
+
+| 参数    | 类型    | 说明  |
+| ----- | ----- |-----|
+| packNodeId| int   | 包机id |
+| packName  | String| 包机名 |
+
+**返回示例**：
+
+```json
+[
+  {
+    "packNodeId": 809,
+    "packName": "包机计划1"
+  },
+  {
+    "packNodeId": 811,
+    "packName": "包机计划2"
+  }
+]
+```
+
+
