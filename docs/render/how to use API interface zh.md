@@ -2594,7 +2594,7 @@ ids = api.query.get_small_task_id(task_id=1521323)
 | -------------- | --------- | ----------------------------------------------------------------------- |
 | id             | int       | 硬件配置id（hardwareConfigId）                                          |
 | type           | int       | 1:CPU;`<br>`2: GPU                                                    |
-| model          | string    | 硬件型号, 默认"Default"                                                 |
+| model          | string    | 硬件型号                                                 |
 | ram            | String    | 内存                                                                    |
 | gpuNum         | String    | GPU卡数，CPU平台为"null"                                                |
 | platform       | int       | 平台号                                                                  |
@@ -2684,7 +2684,7 @@ hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 | **Parameter**    | **Type**  | Necessary    | **Description**   |
 |------------------|-----------|--------------|-------------------|
 | taskIds          | List[str] | Y            | 任务号集合，修改指定任务的配置参数 |
-| hardwareConfigId | int       | Y            | 硬件配置id            |
+| hardwareConfigId | List[str] | Y            | 硬件配置id集合          |
 | model            | String    | Y            | 型号                |
 | gpuNum           | String    | Y            | GPU卡数             |
 | ram              | String    | Y            | 内存                |
@@ -2694,7 +2694,7 @@ hardware_config = api.user.get_hardware_config(task_ids=["6306543"])
 **请求示例**：
 
 ```python
-edit_hardware_config = api.task.edit_task_hardware_config([2191725], 496, '28C', '', '64GB')
+edit_hardware_config = api.task.edit_task_hardware_config(["2191725"], ["496"], '28C', '', '64GB')
 ```
 
 **返回示例**：
